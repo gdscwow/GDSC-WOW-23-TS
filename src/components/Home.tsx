@@ -7,10 +7,11 @@ import Footer from '@/components/Footer';
 import RegionsPath from '@/components/regionsPath';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
-
+import { useEffect } from 'react';
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+
 	return (
 		<>
 			<Head>

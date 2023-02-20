@@ -11,7 +11,7 @@ export default function Navbar() {
 		<nav className='sticky top-0 z-10 w-screen' id='navbar'>
 			<div className='block lg:hidden'>
 				<div className='flex items-center justify-between px-10 py-10 bg-white select-none backdrop:blur-lg'>
-					<FiMenu className='text-3xl font-bold fill-gblue' />
+					<a href='#hero'><Image src='/svg/circle.svg' width={70} height={70} className='w-[2em] animate-spin-slow' alt='circle' /></a>
 					<button className='flex items-center px-6 py-4 text-sm rounded-md cursor-pointer lg:text-md bg-gblue'>
 						<span className={`${poppins.className} text-white`}>SWITCH TO ANOTHER REGION</span>
 					</button>
