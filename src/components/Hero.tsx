@@ -163,7 +163,7 @@ export default function Hero() {
 						fetch('/JSON/regions.json')
 							.then((res) => res.json())
 							.then((regions) => {
-								regions.some((region) => {
+								regions.some((region: any) => {
 									if (region.principalSubdivision === data.principalSubdivision) {
 										setCurrentRegion(region.name);
 										return true;
