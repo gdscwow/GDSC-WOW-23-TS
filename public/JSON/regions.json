@@ -1,0 +1,104 @@
+[
+    {
+        "name": "Delhi NCR",
+        "city": "Delhi",
+        "principalSubdivision": "Delhi",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Jaipur",
+        "city": "Jaipur",
+        "principalSubdivision": "Rajasthan",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Nagpur",
+        "city": "Nagpur",
+        "principalSubdivision": "Maharashtra",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Bangalore",
+        "principalSubdivision": "Karnataka",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Vishakhapatnam",
+        "principalSubdivision": "Andhra Pradesh",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Lucknow",
+        "principalSubdivision": "Uttar Pradesh",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Pune",
+        "city": "Pune",
+        "principalSubdivision": "Maharashtra",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Chennai",
+        "principalSubdivision": "Tamil Nadu",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Kolkata",
+        "principalSubdivision": "West Bengal",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Gujarat",
+        "principalSubdivision": "Gujarat",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Bhubaneswar",
+        "principalSubdivision": "Odhisa",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Kochi",
+        "principalSubdivision": "Kerala",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Punjab",
+        "principalSubdivision": "Punjab",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Udaipur",
+        "city": "Udaipur",
+        "principalSubdivision": "Rajasthan",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Mumbai",
+        "city": "Mumbai",
+        "principalSubdivision": "Maharashtra",
+        "date": "Coming soon",
+        "venure": "TBA"
+    },
+    {
+        "name": "Hyderabad",
+        "principalSubdivision": "Telangana",
+        "date": "Coming soon",
+        "venure": "TBA"
+    }
+]

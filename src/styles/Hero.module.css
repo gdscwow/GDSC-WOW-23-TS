@@ -1,0 +1,33 @@
+.bgGradient {
+	background: linear-gradient(45deg, #0f9d58, #3b71fe, #db4437, #f89b00);
+	background-clip: text;
+}
+
+.bgGradientAnim {
+	background: linear-gradient(
+		to right,
+		#0f9d58,
+		#0f9d58,
+		#3b71fe,
+		#3b71fe,
+		#db4437,
+		#db4437,
+		#f89b00,
+		#f89b00,
+		#0f9d58,
+		#0f9d58
+	);
+	background-clip: text;
+	background-size: 500%;
+
+	animation: gradientAnim 5s linear infinite forwards;
+}
+
+@keyframes gradientAnim {
+	0% {
+		background-position: 0;
+	}
+	100% {
+		background-position: 100%;
+	}
+}
