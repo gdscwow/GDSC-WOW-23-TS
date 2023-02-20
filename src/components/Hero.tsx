@@ -57,11 +57,11 @@ const RegionFound = ({ currentRegion }: { currentRegion: string | null | undefin
 					<div className='mt-2 h-[2px] transition-all group-hover:bg-ggreen w-full bg-transparent'></div>
 				</div>
 				<div className={`mb-4 min-[1537px]:mb-8 text-xl sm:text-3xl text-center ${poppins.className}`}>
-					<div>Venue: Mera Ghar, Raat Ko Aana</div>
+					<div>To Be Announced</div>
 					<div className='mt-2 h-[2px] transition-all bg-gred w-full'></div>
 				</div>
 				<div className={`text-center text-lg sm:text-2xl ${poppins.className}`}>
-					<div>Date & Time: 9AM - 6PM, March 25th, 2023 </div>
+					<div>Coming Soon</div>
 					<div className='mt-2 h-[2px] transition-all bg-gyellow w-full'></div>
 				</div>
 			</div>
@@ -163,7 +163,7 @@ export default function Hero() {
 						fetch('/JSON/regions.json')
 							.then((res) => res.json())
 							.then((regions) => {
-								regions.some((region) => {
+								regions.some((region: any) => {
 									if (region.principalSubdivision === data.principalSubdivision) {
 										setCurrentRegion(region.name);
 										return true;

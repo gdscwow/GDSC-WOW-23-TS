@@ -38,7 +38,6 @@ export default function Navbar() {
 									key={x.name}
 									id='custom-ul'
 									href={`${x.to}`}
-									as={'/'}
 									className={`${poppins.className} px-4 relative inline-block after:-bottom-2 hover:text-black cursor-pointer text-gray-500  text-md lg:text-lg`}>
 									{x.name}
 								</a>

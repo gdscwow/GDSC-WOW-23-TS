@@ -1298,7 +1298,7 @@ const RegionsPathNarrow = () => {
 const RegionsPath = () => {
 	return (
 		<div className='w-screen p-4 mt-16 ' id='regions'>
-			<div className='mb-16 text-6xl font-bold textCenter font-google-sans'>Explore All Regions</div>
+			<div className='mb-16 text-6xl font-bold text-center font-google-sans'>Explore All Regions</div>
 			<div className='hidden md:block'>
 				<RegionsPathWide />
 			</div>
