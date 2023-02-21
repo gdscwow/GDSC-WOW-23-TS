@@ -467,7 +467,7 @@ const RegionsPathWide = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/hyderabad/#hero')}
+				onClick={() => router.push('/jaipur/#hero')}
 				x='104.5'
 				y='341.5'
 				width='176'
@@ -503,7 +503,7 @@ const RegionsPathWide = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/jaipur/#hero')}
+				onClick={() => router.push('/hyderabad/#hero')}
 				x='1078.5'
 				y='441.5'
 				width='250'
@@ -935,7 +935,7 @@ const RegionsPathNarrow = () => {
 			</g>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/gujarat/#hero')}
+				onClick={() => router.push('/vishakhapatnam/#hero')}
 				x='150.219'
 				y='881.219'
 				width='83.0573'
@@ -948,7 +948,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/vishakhapatnam/#hero')}
+				onClick={() => router.push('/bhubaneshwar/#hero')}
 				x='17.2186'
 				y='0.218572'
 				width='153.874'
@@ -961,7 +961,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/bhubaneshwar/#hero')}
+				onClick={() => router.push('/delhi/#hero')}
 				x='228.219'
 				y='8.21857'
 				width='139.886'
@@ -974,7 +974,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/delhi/#hero')}
+				onClick={() => router.push('/mumbai/#hero')}
 				x='253.219'
 				y='103.219'
 				width='97.0458'
@@ -987,7 +987,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/mumbai/#hero')}
+				onClick={() => router.push('/hyderabad/#hero')}
 				x='65.2186'
 				y='127.219'
 				width='86.1173'
@@ -1013,7 +1013,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/hyderabad/#hero')}
+				onClick={() => router.push('/lucknow/#hero')}
 				x='35.1639'
 				y='216.65'
 				width='109.286'
@@ -1026,7 +1026,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/lucknow/#hero')}
+				onClick={() => router.push('/jaipur/#hero')}
 				x='238.219'
 				y='269.219'
 				width='93.1116'
@@ -1039,7 +1039,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/jaipur/#hero')}
+				onClick={() => router.push('/kerala/#hero')}
 				x='252.219'
 				y='416.219'
 				width='76.9373'
@@ -1052,7 +1052,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/kerala/#hero')}
+				onClick={() => router.push('/bangalore/#hero')}
 				x='48.2186'
 				y='432.219'
 				width='83.0573'
@@ -1065,7 +1065,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/Bangalore/#hero')}
+				onClick={() => router.push('/kolkata/#hero')}
 				x='113.219'
 				y='522.219'
 				width='107.537'
@@ -1078,7 +1078,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/kolkata/#hero')}
+				onClick={() => router.push('/chennai/#hero')}
 				x='291.219'
 				y='556.219'
 				width='87.4287'
@@ -1091,7 +1091,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/chennai/#hero')}
+				onClick={() => router.push('/nagpur/#hero')}
 				x='180.219'
 				y='646.219'
 				width='83.0573'
@@ -1104,7 +1104,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/nagpur/#hero')}
+				onClick={() => router.push('/punjab/#hero')}
 				x='31.2186'
 				y='665.219'
 				width='92.2373'
@@ -1117,7 +1117,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/punjab/#hero')}
+				onClick={() => router.push('/udaipur/#hero')}
 				x='112.219'
 				y='754.219'
 				width='83.0573'
@@ -1130,7 +1130,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/udaipur/#hero')}
+				onClick={() => router.push('/gujarat/#hero')}
 				x='266.219'
 				y='798.219'
 				width='83.0573'
