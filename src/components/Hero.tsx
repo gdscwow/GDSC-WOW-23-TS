@@ -150,7 +150,12 @@ export default function Hero() {
 								.then((res) => res.json())
 								.then((data) => {
 									regionsData.some((region) => {
-										if (region.principalSubdivision === data.principalSubdivision) {
+										if (
+											region.city?.toLowerCase() === data.city.toLowerCase() ||
+											region.name.toLowerCase() === data.city.toLowerCase() ||
+											region.name.toLowerCase() === data.principalSubdivision.toLowerCase() ||
+											region.principalSubdivision.toLowerCase() === data.principalSubdivision.toLowerCase()
+										) {
 											setCurrentRegion(region);
 											return true;
 										}
