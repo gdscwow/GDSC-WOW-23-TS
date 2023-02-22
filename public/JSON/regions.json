@@ -3,102 +3,102 @@
         "name": "Delhi NCR",
         "city": "Delhi",
         "principalSubdivision": "Delhi",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "25 March",
+        "venue": "TBA"
     },
     {
         "name": "Jaipur",
         "city": "Jaipur",
         "principalSubdivision": "Rajasthan",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "31 March",
+        "venue": "TBA"
     },
     {
         "name": "Nagpur",
         "city": "Nagpur",
         "principalSubdivision": "Maharashtra",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "8 April",
+        "venue": "TBA"
     },
     {
         "name": "Bangalore",
         "principalSubdivision": "Karnataka",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "1 April",
+        "venue": "TBA"
     },
     {
         "name": "Vishakhapatnam",
         "principalSubdivision": "Andhra Pradesh",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "15 March",
+        "venue": "TBA"
     },
     {
         "name": "Lucknow",
         "principalSubdivision": "Uttar Pradesh",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "30 March",
+        "venue": "TBA"
     },
     {
         "name": "Pune",
         "city": "Pune",
         "principalSubdivision": "Maharashtra",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "26 March",
+        "venue": "TBA"
     },
     {
         "name": "Chennai",
         "principalSubdivision": "Tamil Nadu",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "7 April",
+        "venue": "TBA"
     },
     {
         "name": "Kolkata",
         "principalSubdivision": "West Bengal",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "2 April",
+        "venue": "TBA"
     },
     {
         "name": "Gujarat",
         "principalSubdivision": "Gujarat",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "15 April",
+        "venue": "TBA"
     },
     {
-        "name": "Bhubaneswar",
+        "name": "Bhubaneshwar",
         "principalSubdivision": "Odhisa",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "19 March",
+        "venue": "TBA"
     },
     {
         "name": "Kochi",
         "principalSubdivision": "Kerala",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "31 March",
+        "venue": "TBA"
     },
     {
         "name": "Punjab",
         "principalSubdivision": "Punjab",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "8 April",
+        "venue": "TBA"
     },
     {
         "name": "Udaipur",
         "city": "Udaipur",
         "principalSubdivision": "Rajasthan",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "8 April",
+        "venue": "TBA"
     },
     {
         "name": "Mumbai",
         "city": "Mumbai",
         "principalSubdivision": "Maharashtra",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "25 March",
+        "venue": "TBA"
     },
     {
         "name": "Hyderabad",
         "principalSubdivision": "Telangana",
-        "date": "Coming soon",
-        "venure": "TBA"
+        "date": "25 March",
+        "venue": "TBA"
     }
 ]

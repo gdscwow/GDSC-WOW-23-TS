@@ -5,6 +5,8 @@ import { Poppins } from '@next/font/google';
 import styles from '@/styles/Hero.module.css';
 import { useRouter } from 'next/router';
 
+type Region = { name: string; principalSubdivision: string; city?: string; date: string; venue: string };
+
 const poppins = Poppins({ subsets: ['latin'], weight: '500' });
 const poppinsBold = Poppins({ subsets: ['latin'], weight: '700' });
 
@@ -30,7 +32,7 @@ const RegionNotFound = ({ currentRegion }: { currentRegion: string | null | unde
 	);
 };
 
-const RegionFound = ({ currentRegion }: { currentRegion: string | null | undefined }) => {
+const RegionFound = ({ currentRegion }: { currentRegion: Region | null | undefined }) => {
 	return (
 		<div className='w-screen mb-16 sm:mb-20'>
 			{/* <Image
@@ -47,7 +49,7 @@ const RegionFound = ({ currentRegion }: { currentRegion: string | null | undefin
 				<Image src='/svg/wowcenter.svg' width={500} height={500} alt='circle' />
 				<div
 					className={`uppercase text-transparent text-justify text-[7vw] font-google-sans font-bold ${styles.bgGradientAnim}`}>
-					{currentRegion}
+					{currentRegion?.name}
 				</div>
 				{/* text-5xl sm:text-7xl md:text-8xl lg:text-9xl */}
 				<div className='mb-4 min-[1537px]:mb-8 w-fit group'>
@@ -57,11 +59,11 @@ const RegionFound = ({ currentRegion }: { currentRegion: string | null | undefin
 					<div className='mt-2 h-[2px] transition-all group-hover:bg-ggreen w-full bg-transparent'></div>
 				</div>
 				<div className={`mb-4 min-[1537px]:mb-8 text-xl sm:text-3xl text-center ${poppins.className}`}>
-					<div>To Be Announced</div>
+					<div>Date: {currentRegion?.date || 'To Be Announced'}</div>
 					<div className='mt-2 h-[2px] transition-all bg-gred w-full'></div>
 				</div>
 				<div className={`text-center text-lg sm:text-2xl ${poppins.className}`}>
-					<div>Coming Soon</div>
+					<div>Venue: {currentRegion?.venue || 'Coming Soon'}</div>
 					<div className='mt-2 h-[2px] transition-all bg-gyellow w-full'></div>
 				</div>
 			</div>
@@ -111,26 +113,62 @@ const RegionScroll = ({
 
 export default function Hero() {
 	const router = useRouter();
-	const [regionList, setRegionList] = useState<
-		{ name: string; principalSubdivision: string; city?: string; date: string; venue: string }[]
-	>([]);
-	const [currentRegion, setCurrentRegion] = useState<string | null | undefined>(null);
+	const [regionList, setRegionList] = useState<Region[]>([]);
+	const [currentRegion, setCurrentRegion] = useState<Region | null | undefined>(null);
 
 	useEffect(() => {
-		fetch('/JSON/regions.json')
-			.then((res) => res.json())
-			.then((data) => {
-				setRegionList(data);
-			})
-			.catch((err) => console.log(err));
-	}, []);
+		(async () => {
+			try {
+				const regionsData: Region[] = await (await fetch('/JSON/regions.json')).json();
+				setRegionList(regionsData);
 
-	useEffect(() => {
-		const queryRegion = router.query.region as string;
-		if (!queryRegion) return;
-		const region = regionList.find((region) => region.city?.toLowerCase() === queryRegion?.toLowerCase());
-		setCurrentRegion(region?.name ?? queryRegion);
-	}, [router.query, regionList]);
+				const queryRegion = router.query.region as string;
+				// console.log('Region Found in Query: ', queryRegion);
+
+				const region =
+					queryRegion === undefined
+						? undefined
+						: regionsData.find(
+								(region) =>
+									region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
+									region.name?.toLowerCase() === queryRegion?.toLowerCase()
+						  );
+				setCurrentRegion(region);
+				// console.log('Region Found: ', region);
+				if (queryRegion === undefined && region === undefined) {
+					// console.log('Finding Location... ');
+					const geoLocationPermission = await navigator.permissions.query({ name: 'geolocation' });
+					if (geoLocationPermission.state === 'denied') {
+						setCurrentRegion(undefined);
+					}
+
+					const getCurrentPosition = () => {
+						navigator.geolocation.getCurrentPosition((position) => {
+							fetch(
+								`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=en`
+							)
+								.then((res) => res.json())
+								.then((data) => {
+									regionsData.some((region) => {
+										if (region.principalSubdivision === data.principalSubdivision) {
+											setCurrentRegion(region);
+											return true;
+										}
+										return false;
+									});
+								});
+						});
+					};
+
+					geoLocationPermission.onchange = getCurrentPosition;
+
+					getCurrentPosition();
+				}
+			} catch (error) {
+				console.log(error);
+			}
+		})();
+	}, [router.query]);
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
@@ -143,37 +181,6 @@ export default function Hero() {
 		}
 
 		return () => clearTimeout(timeout);
-	}, [currentRegion]);
-
-	useEffect(() => {
-		if (currentRegion === null) {
-			navigator.permissions.query({ name: 'geolocation' }).then((result) => {
-				if (result.state === 'denied') {
-					setCurrentRegion(undefined);
-				}
-			});
-
-			navigator.geolocation.getCurrentPosition(async (position) => {
-				await fetch(
-					`https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${position.coords.latitude}&longitude=${position.coords.longitude}&localityLanguage=en`
-				)
-					.then((res) => res.json())
-					.then((data) => {
-						console.log(data);
-						fetch('/JSON/regions.json')
-							.then((res) => res.json())
-							.then((regions) => {
-								regions.some((region: any) => {
-									if (region.principalSubdivision === data.principalSubdivision) {
-										setCurrentRegion(region.name);
-										return true;
-									}
-									return false;
-								});
-							});
-					});
-			});
-		}
 	}, [currentRegion]);
 
 	if (currentRegion !== null) {
