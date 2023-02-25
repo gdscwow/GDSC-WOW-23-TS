@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function About() {
 	return (
-		<div className='relative flex flex-col items-center w-screen font-google-sans'>
+		<div className='relative flex flex-col mt-10 items-center w-screen font-google-sans'>
 			<div className='relative flex flex-col p-10 mx-10 text-lg border-2 rounded-lg sm:mx-24 border-gred md:flex-row'>
 				<div>
 					<span className='font-semibold'>Namaste India!</span>

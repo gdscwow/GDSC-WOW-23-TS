@@ -38,12 +38,10 @@ export default function Hackathon() {
             Hackathon
           </h1>
           <button
-            disabled={true}
-            className="flex disabled:opacity-80 items-center px-6 w-fit py-4 text-sm rounded-md cursor-pointer lg:text-md bg-gblue"
+            data-button-theme="light"
+            data-hackathon-slug="https://gdscwow.devfolio.co" 
+            className="apply-button flex items-center px-6 w-fit py-4 text-sm rounded-md cursor-pointer lg:text-md bg-gblue"
           >
-            <span className={`${poppins.className} text-white uppercase`}>
-              Registrations Opening Soon!!!
-            </span>
           </button>
         </div>
         <div>

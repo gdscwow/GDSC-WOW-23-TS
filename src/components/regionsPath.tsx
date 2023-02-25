@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-
+import styles from '@/styles/Hero.module.css';
 const RegionsPathWide = () => {
 	const router = useRouter();
 
@@ -1030,8 +1030,8 @@ const RegionsPathNarrow = () => {
 
 const RegionsPath = () => {
 	return (
-		<div className='w-screen px-4 mt-16 ' id='regions'>
-			<div className='mb-16 text-6xl font-bold text-center font-google-sans'>Explore All Regions</div>
+		<div className='w-screen px-4 mt-28' id='regions'>
+			<div className={`mb-16 h-fit text-6xl font-bold text-center font-google-sans text-transparent ${styles.bgGradientAnim}`}>Explore All Regions</div>
 			<div className='hidden mx-8 md:block'>
 				<RegionsPathWide />
 			</div>
