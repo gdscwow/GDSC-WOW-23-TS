@@ -12,6 +12,7 @@ const poppinsBold = Poppins({ subsets: ['latin'], weight: '700' });
 
 const RegionNotFound = ({ currentRegion }: { currentRegion: string | null | undefined }) => {
 	const router = useRouter();
+	const videoUrl = 'https://www.youtube.com/embed/sDJtzVOB8Jo';
 	return (
 		<div className='grid w-screen grid-cols-1 grid-rows-1 gap-20 px-24 mt-5 mb-10 md:grid-cols-2 md:grid-rows-1'>
 			<div className='flex flex-col items-center w-full md:items-start'>
@@ -26,7 +27,7 @@ const RegionNotFound = ({ currentRegion }: { currentRegion: string | null | unde
 				</div>
 			</div>
 			<div className='flex items-center justify-center w-full md:justify-end'>
-				<Image src='/svg/404.svg' alt='No Region' width={600} height={415} className='relative w-[80%]' />
+				<iframe src={videoUrl} width={600} height={415} className='relative w-[100%]' />
 			</div>
 		</div>
 	);
@@ -129,10 +130,10 @@ export default function Hero() {
 					queryRegion === undefined
 						? undefined
 						: regionsData.find(
-								(region) =>
-									region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
-									region.name?.toLowerCase() === queryRegion?.toLowerCase()
-						  );
+							(region) =>
+								region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
+								region.name?.toLowerCase() === queryRegion?.toLowerCase()
+						);
 				setCurrentRegion(region);
 				// console.log('Region Found: ', region);
 				if (queryRegion === undefined && region === undefined) {
