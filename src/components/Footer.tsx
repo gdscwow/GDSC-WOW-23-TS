@@ -18,7 +18,7 @@ const Footer = () => {
 				<div className='flex flex-col items-center gap-4'>
 					<div className='text-3xl font-bold text-ggreen'>Follow Us</div>
 					<div className='flex flex-row gap-8 text-3xl'>
-						<Link href='https://discord.gg/9WDwVAWG98'>
+						<Link href='https://discord.gg/kyeQAg7KSp'>
 							<Image src='/svg/discord.svg' alt='discord' width={35} height={35} className='w-[1em]' />
 						</Link>
 						<Link href='https://instagram.com/gdscwow?igshid=ZDdkNTZiNTM='>
