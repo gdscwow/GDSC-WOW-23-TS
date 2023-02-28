@@ -5,7 +5,7 @@ const Footer = () => {
 	return (
 		<div
 			id='footer'
-			className='flex flex-col justify-between p-10 m-10 border-2 border-black rounded-lg  lg:flex-row font-google-sans'>
+			className='flex flex-col justify-between p-10 m-10 border-2 border-black rounded-lg lg:flex-row font-google-sans'>
 			<div className='flex flex-col items-center lg:items-start gap-4 w-full  lg:w-[35%]'>
 				<div className='text-3xl font-bold text-gred'>About Us</div>
 				<div className='text-lg'>
@@ -18,7 +18,7 @@ const Footer = () => {
 				<div className='flex flex-col items-center gap-4'>
 					<div className='text-3xl font-bold text-ggreen'>Follow Us</div>
 					<div className='flex flex-row gap-8 text-3xl'>
-						<Link href='https://discord.gg/2e8Tq7tm'>
+						<Link href='https://discord.gg/9WDwVAWG98'>
 							<Image src='/svg/discord.svg' alt='discord' width={35} height={35} className='w-[1em]' />
 						</Link>
 						<Link href='https://instagram.com/gdscwow?igshid=ZDdkNTZiNTM='>
