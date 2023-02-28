@@ -18,20 +18,20 @@ const Footer = () => {
 				<div className='flex flex-col items-center gap-4'>
 					<div className='text-3xl font-bold text-ggreen'>Follow Us</div>
 					<div className='flex flex-row gap-8 text-3xl'>
-						<Link href='https://discord.gg/kyeQAg7KSp'>
+						<Link href='https://s.gdscwow.live/discord'>
 							<Image src='/svg/discord.svg' alt='discord' width={35} height={35} className='w-[1em]' />
 						</Link>
-						<Link href='https://instagram.com/gdscwow?igshid=ZDdkNTZiNTM='>
+						<Link href='https://s.gdscwow.live/insta'>
 							<Image src='/svg/insta.svg' alt='insta' width={35} height={35} className='w-[1em]' />
 						</Link>
-						<Link href='https://www.youtube.com/@DiversityinGDSC'>
+						<Link href='https://s.gdscwow.live/YT'>
 							<Image src='/svg/youtube.svg' alt='youtube' width={48} height={48} className='w-[1.3em] mt-[-10%]' />
 						</Link>
 					</div>
 				</div>
 				<div className='flex flex-col items-center gap-2'>
 					<div className='mt-4 text-3xl font-bold text-gblue '>Contact Us</div>
-					<div className='text-lg'>gdscwow@gmail.com</div>
+					<div className='text-lg'>support@gdscwow.live</div>
 					<div className='text-lg'>support@gdscwow.team</div>
 				</div>
 			</div>
