@@ -27,7 +27,7 @@ const RegionNotFound = ({ currentRegion }: { currentRegion: string | null | unde
 				</div>
 			</div>
 			<div className='flex items-center justify-center w-full md:justify-end'>
-				<iframe src={videoUrl} width={600} height={415} className='relative w-[100%]' />
+				<iframe src={videoUrl} width={600} height={415} className='relative w-[100%]' allowFullScreen />
 			</div>
 		</div>
 	);
@@ -130,10 +130,10 @@ export default function Hero() {
 					queryRegion === undefined
 						? undefined
 						: regionsData.find(
-								(region) =>
-									region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
-									region.name?.toLowerCase() === queryRegion?.toLowerCase()
-						  );
+							(region) =>
+								region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
+								region.name?.toLowerCase() === queryRegion?.toLowerCase()
+						);
 				setCurrentRegion(region);
 				// console.log('Region Found: ', region);
 				if (queryRegion === undefined && region === undefined) {
