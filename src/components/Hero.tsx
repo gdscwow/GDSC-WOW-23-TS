@@ -130,10 +130,10 @@ export default function Hero() {
 					queryRegion === undefined
 						? undefined
 						: regionsData.find(
-							(region) =>
-								region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
-								region.name?.toLowerCase() === queryRegion?.toLowerCase()
-						);
+								(region) =>
+									region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
+									region.name?.toLowerCase() === queryRegion?.toLowerCase()
+						  );
 				setCurrentRegion(region);
 				// console.log('Region Found: ', region);
 				if (queryRegion === undefined && region === undefined) {
