@@ -27,7 +27,7 @@ const RegionNotFound = ({ currentRegion }: { currentRegion: string | null | unde
 				</div>
 			</div>
 			<div className='flex items-center justify-center w-full md:justify-end'>
-				<iframe src={videoUrl} width={600} height={415} className='relative w-[100%]' allowFullScreen />
+				<iframe src={videoUrl} width={600} height={415} className='relative w-[100%]'  allowFullScreen={true}/>
 			</div>
 		</div>
 	);
