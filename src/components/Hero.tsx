@@ -4,6 +4,7 @@ import { Poppins } from '@next/font/google';
 
 import styles from '@/styles/Hero.module.css';
 import { useRouter } from 'next/router';
+import HeroIFrame from './Hero/HeroIFrame';
 
 type Region = { name: string; principalSubdivision: string; city?: string; date: string; venue: string };
 
@@ -11,8 +12,6 @@ const poppins = Poppins({ subsets: ['latin'], weight: '500' });
 const poppinsBold = Poppins({ subsets: ['latin'], weight: '700' });
 
 const RegionNotFound = ({ currentRegion }: { currentRegion: string | null | undefined }) => {
-	const router = useRouter();
-	const videoUrl = 'https://www.youtube.com/embed/sDJtzVOB8Jo';
 	return (
 		<div className='grid w-screen grid-cols-1 grid-rows-1 gap-20 px-24 mt-5 mb-10 md:grid-cols-2 md:grid-rows-1'>
 			<div className='flex flex-col items-center w-full md:items-start'>
@@ -27,7 +26,7 @@ const RegionNotFound = ({ currentRegion }: { currentRegion: string | null | unde
 				</div>
 			</div>
 			<div className='flex items-center justify-center w-full md:justify-end'>
-				<iframe src={videoUrl} width={600} height={415} className='relative w-[100%]' />
+				<HeroIFrame></HeroIFrame>
 			</div>
 		</div>
 	);
