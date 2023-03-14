@@ -3,15 +3,17 @@
         "name": "Delhi NCR",
         "city": "Delhi",
         "principalSubdivision": "Delhi",
-        "date": "25 March",
-        "venue": "TBA"
+        "date": "2 April",
+        "venue": "Gautam Buddha University",
+        "registration": "https://www.commudle.com/fill-form/1697"
     },
     {
         "name": "Jaipur",
         "city": "Jaipur",
         "principalSubdivision": "Rajasthan",
         "date": "31 March",
-        "venue": "TBA"
+        "venue": "TBA",
+        "registration": "https://lu.ma/wowjaipur"
     },
     {
         "name": "Nagpur",
@@ -21,15 +23,9 @@
         "venue": "TBA"
     },
     {
-        "name": "Bangalore",
-        "principalSubdivision": "Karnataka",
-        "date": "1 April",
-        "venue": "TBA"
-    },
-    {
-        "name": "visakhapatnam",
+        "name": "Visakhapatnam",
         "principalSubdivision": "Andhra Pradesh",
-        "date": "18 March",
+        "date": "24 March",
         "venue": "TBA"
     },
     {
@@ -85,7 +81,7 @@
         "name": "Udaipur",
         "city": "Udaipur",
         "principalSubdivision": "Rajasthan",
-        "date": "9 April",
+        "date": "8 April",
         "venue": "TBA"
     },
     {

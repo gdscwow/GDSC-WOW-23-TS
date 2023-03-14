@@ -4,8 +4,16 @@ import { Poppins } from '@next/font/google';
 
 import styles from '@/styles/Hero.module.css';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 
-type Region = { name: string; principalSubdivision: string; city?: string; date: string; venue: string };
+type Region = {
+	name: string;
+	principalSubdivision: string;
+	city?: string;
+	date: string;
+	venue: string;
+	registration?: string;
+};
 
 const poppins = Poppins({ subsets: ['latin'], weight: '500' });
 const poppinsBold = Poppins({ subsets: ['latin'], weight: '700' });
@@ -27,7 +35,7 @@ const RegionNotFound = ({ currentRegion }: { currentRegion: string | null | unde
 				</div>
 			</div>
 			<div className='flex items-center justify-center w-full md:justify-end'>
-				<iframe src={videoUrl} width={600} height={415} className='relative w-[100%]'  allowFullScreen={true}/>
+				<iframe src={videoUrl} width={600} height={415} className='relative w-[100%]' allowFullScreen={true} />
 			</div>
 		</div>
 	);
@@ -55,7 +63,13 @@ const RegionFound = ({ currentRegion }: { currentRegion: Region | null | undefin
 				{/* text-5xl sm:text-7xl md:text-8xl lg:text-9xl */}
 				<div className='mb-4 min-[1537px]:mb-8 w-fit group'>
 					<button className='flex items-center px-6 py-3 mt-5 text-xl rounded-md cursor-pointer w-fit bg-gblue'>
-						<span className={`${poppins.className} text-white`}>REGISTRATIONS OPENING SOON !</span>
+						<span className={`${poppins.className} text-white`}>
+							{currentRegion?.registration ? (
+								<Link href={currentRegion.registration}>Register Now !</Link>
+							) : (
+								`REGISTRATIONS OPENING SOON !`
+							)}
+						</span>
 					</button>
 					<div className='mt-2 h-[2px] transition-all group-hover:bg-ggreen w-full bg-transparent'></div>
 				</div>
@@ -130,10 +144,10 @@ export default function Hero() {
 					queryRegion === undefined
 						? undefined
 						: regionsData.find(
-							(region) =>
-								region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
-								region.name?.toLowerCase() === queryRegion?.toLowerCase()
-						);
+								(region) =>
+									region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
+									region.name?.toLowerCase() === queryRegion?.toLowerCase()
+						  );
 				setCurrentRegion(region);
 				// console.log('Region Found: ', region);
 				if (queryRegion === undefined && region === undefined) {
