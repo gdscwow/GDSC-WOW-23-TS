@@ -13,6 +13,7 @@ type Region = {
 	date: string;
 	venue: string;
 	registration?: string;
+	map?: string;
 };
 
 const poppins = Poppins({ subsets: ['latin'], weight: '500' });
@@ -78,7 +79,14 @@ const RegionFound = ({ currentRegion }: { currentRegion: Region | null | undefin
 					<div className='mt-2 h-[2px] transition-all bg-gred w-full'></div>
 				</div>
 				<div className={`text-center text-lg sm:text-2xl ${poppins.className}`}>
-					<div>Venue: {currentRegion?.venue || 'Coming Soon'}</div>
+					{currentRegion?.map && currentRegion.venue ? (
+						<Link href={currentRegion.map}>
+							<div>Venue: {currentRegion.venue}</div>
+						</Link>
+					) : (
+						<div>Venue: {currentRegion?.venue || 'Coming Soon'}</div>
+					)}
+
 					<div className='mt-2 h-[2px] transition-all bg-gyellow w-full'></div>
 				</div>
 			</div>

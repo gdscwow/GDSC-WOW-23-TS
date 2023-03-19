@@ -12,7 +12,8 @@
         "city": "Jaipur",
         "principalSubdivision": "Rajasthan",
         "date": "31 March",
-        "venue": "TBA",
+        "venue": "Birla Institute of Scientific Research, Statue Circle, C Scheme, Rambagh, Jaipur,Rajasthan, 302001",
+        "map": "https://goo.gl/maps/9hsQor7n5jjM4FXT8",
         "registration": "https://lu.ma/wowjaipur"
     },
     {
@@ -58,7 +59,9 @@
         "name": "Gujarat",
         "principalSubdivision": "Gujarat",
         "date": "15 April",
-        "venue": "TBA"
+        "venue": "Karnavati University",
+        "map": "https://maps.app.goo.gl/Q9uANtjqxVH7t2Gh9",
+        "registration": "https://unstop.com/p/gdsc-wow-gujarat-google-developer-student-clubs-gdsc-646273"
     },
     {
         "name": "Bhubaneshwar",
@@ -76,13 +79,14 @@
         "name": "Punjab",
         "principalSubdivision": "Punjab",
         "date": "15 April",
-        "venue": "TBA"
+        "venue": "Lovely Professional University, Jalandhar - Delhi, Grand Trunk Rd, Phagwara, Punjab 144001",
+        "map": "http://pb.gdscwow.live/4dI"
     },
     {
         "name": "Udaipur",
         "city": "Udaipur",
         "principalSubdivision": "Rajasthan",
-        "date": "8 April",
+        "date": "9 April",
         "venue": "TBA"
     },
     {
