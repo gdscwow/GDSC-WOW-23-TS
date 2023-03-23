@@ -46,8 +46,8 @@ const RegionFound = ({ currentRegion }: { currentRegion: Region | null | undefin
 	if (currentRegion?.name === 'Bhubaneshwar') {
 		return (
 			<div className='w-screen mb-16 sm:mb-20'>
-				<div className='w-full h-full flex flex-row'>
-					<div className='flex flex-col items-start justify-center mx-24'>
+				<div className='w-full h-full flex flex-col md:flex-row'>
+					<div className='flex flex-col items-center md:items-start justify-center mx-24'>
 						<p className='hidden min-[1537px]:block mb-5 min-[1537px]:mt-8 text-2xl font-semibold text-center text-gblue'>
 							Hello, We Welcome you to
 						</p>
