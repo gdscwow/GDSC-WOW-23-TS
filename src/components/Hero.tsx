@@ -43,7 +43,7 @@ const RegionNotFound = ({ currentRegion }: { currentRegion: string | null | unde
 };
 
 const RegionFound = ({ currentRegion }: { currentRegion: Region | null | undefined }) => {
-	if (currentRegion?.name === 'Bhubaneshwar') {
+	if (currentRegion?.name === 'Bhubaneswar') {
 		return (
 			<div className='w-screen mb-16 sm:mb-20'>
 				<div className='w-full h-full flex flex-col md:flex-row'>
@@ -87,7 +87,7 @@ const RegionFound = ({ currentRegion }: { currentRegion: Region | null | undefin
 					</div>
 				</div>
 				<div className='relative w-full '>
-					<Image src='/png/bbsr.png' width={1440} height={380} alt='Bhubaneshwar' className='relative w-full' />
+					<Image src='/png/bbsr.png' width={1440} height={380} alt='Bhubaneswar' className='relative w-full' />
 				</div>
 			</div>
 		);

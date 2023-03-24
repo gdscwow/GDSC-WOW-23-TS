@@ -38,7 +38,7 @@ const RegionsPathWide = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/bhubaneshwar/#hero')}
+				onClick={() => router.push('/bhubaneswar/#hero')}
 				x='460.5'
 				y='184.5'
 				width='320'
@@ -578,7 +578,7 @@ const RegionsPathNarrow = () => {
 			/>
 			<rect
 				className='cursor-pointer'
-				onClick={() => router.push('/bhubaneshwar/#hero')}
+				onClick={() => router.push('/bhubaneswar/#hero')}
 				x='228.219'
 				y='19.2186'
 				width='139.886'
