@@ -5,16 +5,7 @@ import { Poppins } from '@next/font/google';
 import styles from '@/styles/Hero.module.css';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
-
-type Region = {
-	name: string;
-	principalSubdivision: string;
-	city?: string;
-	date: string;
-	venue: string;
-	registration?: string;
-	map?: string;
-};
+import { Region, useCurrentRegion } from '@/context/Region.context';
 
 const poppins = Poppins({ subsets: ['latin'], weight: '500' });
 const poppinsBold = Poppins({ subsets: ['latin'], weight: '700' });
@@ -186,7 +177,8 @@ const RegionScroll = ({
 export default function Hero() {
 	const router = useRouter();
 	const [regionList, setRegionList] = useState<Region[]>([]);
-	const [currentRegion, setCurrentRegion] = useState<Region | null | undefined>(null);
+
+	const regionContext = useCurrentRegion()!;
 
 	useEffect(() => {
 		(async () => {
@@ -205,13 +197,13 @@ export default function Hero() {
 									region.city?.toLowerCase() === queryRegion?.toLowerCase() ||
 									region.name?.toLowerCase() === queryRegion?.toLowerCase()
 						  );
-				setCurrentRegion(region);
+				regionContext.setRegion(region);
 				// console.log('Region Found: ', region);
 				if (queryRegion === undefined && region === undefined) {
 					// console.log('Finding Location... ');
 					const geoLocationPermission = await navigator.permissions.query({ name: 'geolocation' });
 					if (geoLocationPermission.state === 'denied') {
-						setCurrentRegion(undefined);
+						regionContext.setRegion(undefined);
 					}
 
 					const getCurrentPosition = () => {
@@ -228,7 +220,7 @@ export default function Hero() {
 											region.name.toLowerCase() === data.principalSubdivision.toLowerCase() ||
 											region.principalSubdivision.toLowerCase() === data.principalSubdivision.toLowerCase()
 										) {
-											setCurrentRegion(region);
+											regionContext.setRegion(region);
 											return true;
 										}
 										return false;
@@ -249,24 +241,24 @@ export default function Hero() {
 
 	useEffect(() => {
 		const timeout = setTimeout(() => {
-			if (currentRegion === null) {
-				setCurrentRegion(undefined);
+			if (regionContext.current === null) {
+				regionContext.setRegion(undefined);
 			}
 		}, 5000);
-		if (currentRegion !== undefined && currentRegion !== null) {
+		if (regionContext.current !== undefined && regionContext.current !== null) {
 			clearTimeout(timeout);
 		}
 
 		return () => clearTimeout(timeout);
-	}, [currentRegion]);
+	}, [regionContext.current]);
 
-	if (currentRegion !== null) {
+	if (regionContext.current !== null) {
 		return (
 			<div id='hero' className=''>
-				{currentRegion === undefined ? (
-					<RegionNotFound currentRegion={currentRegion} />
+				{regionContext.current === undefined ? (
+					<RegionNotFound currentRegion={regionContext.current} />
 				) : (
-					<RegionFound currentRegion={currentRegion} />
+					<RegionFound currentRegion={regionContext.current} />
 				)}
 				<RegionScroll regionList={regionList} />
 			</div>

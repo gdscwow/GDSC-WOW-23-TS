@@ -6,10 +6,14 @@ import RegionsPath from '@/components/regionsPath';
 import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Hackathon from '@/components/Hackathon';
+import { Region, RegionContext } from '@/context/Region.context';
+import { useState } from 'react';
+import Sponsor from '@/components/Sponsor';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
+	const [currentRegion, setCurrentRegion] = useState<Region | null | undefined>(null);
 	return (
 		<>
 			<Head>
@@ -20,10 +24,13 @@ export default function Home() {
 			</Head>
 			<Navbar />
 			<main>
-				<Hero />
-				<About />
-				<RegionsPath />
-				<Hackathon />
+				<RegionContext.Provider value={{ current: currentRegion, setRegion: setCurrentRegion }}>
+					<Hero />
+					<About />
+					<RegionsPath />
+					<Hackathon />
+					<Sponsor />
+				</RegionContext.Provider>
 			</main>
 			<Footer />
 		</>
