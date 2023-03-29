@@ -13,9 +13,11 @@ const Sponsor = () => {
 						<div className='flex flex-row h-full items-end w-full justify-evenly'>
 							<div className='flex flex-col h-full justify-evenly gap-4 items-center'>
 								<div className='w-[200px]'>
-									<Image src='/jaipur/Zelta.jpeg' alt='Zelta' width={400} height={400} />
+									<Link href='https://zeltatech.com/'>
+										<Image src='/jaipur/Zelta2.png' alt='Zelta' width={400} height={400} />
+									</Link>
 								</div>
-								<div className='font-semibold '>Zelta Tech</div>
+								{/* <div className='font-semibold '>Zelta Tech</div> */}
 							</div>
 						</div>
 					</div>
@@ -27,13 +29,24 @@ const Sponsor = () => {
 								<div className='w-[200px]'>
 									<Image src='/jaipur/5ire.svg' alt='5ire Chain' width={400} height={400} />
 								</div>
-								<div className='font-semibold '>5Fire Chain</div>
+								{/* <div className='font-semibold '>5Fire Chain</div> */}
 							</div>
 							<div className='flex flex-col h-full justify-evenly gap-4 items-center'>
 								<div className='w-[200px]'>
 									<Image src='/jaipur/Zeeve.jpeg' alt='Zeeve' width={549} height={549} />
 								</div>
-								<div className='font-semibold '>Zeeve</div>
+								{/* <div className='font-semibold '>Zeeve</div> */}
+							</div>
+						</div>
+					</div>
+					<div className='flex items-center flex-col w-full pb-8'>
+						<div className='font-semibold text-2xl mt-8 mb-4 text-ggreen'>Bronze Sponsors</div>
+						<div className='flex flex-row flex-wrap gap-8 h-full items-end w-full justify-evenly'>
+							<div className='flex flex-col h-full justify-evenly gap-4 items-center'>
+								<div className='w-[200px]'>
+									<Image src='/jaipur/Tribe.png' alt='Tribe' width={400} height={400} />
+								</div>
+								{/* <div className='font-semibold '>5Fire Chain</div> */}
 							</div>
 						</div>
 					</div>
