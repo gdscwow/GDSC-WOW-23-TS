@@ -83,7 +83,7 @@ const Punjab: FC<PunjabProps> = ({
             <button className="flex items-center px-6 py-3 mt-5 text-xl rounded-md cursor-pointer w-fit bg-gblue">
               <span className={`${poppins.className} text-white`}>
                 {registration ? (
-                  <Link href={registration}>Register Now !</Link>
+                  <Link href={registration}>GRAB YOUR SEATS NOW !!</Link>
                 ) : (
                   `REGISTRATIONS OPENING SOON !`
                 )}
