@@ -75,13 +75,13 @@
     {
         "name": "Kerala",
         "principalSubdivision": "Kerala",
-        "date": "31 March",
+        "date": "29 March",
         "venue": "KMCT Medical College Campus, Mukkam,Calicut, Kerala"
     },
     {
         "name": "Punjab",
         "principalSubdivision": "Punjab",
-        "date": "15 April",
+        "date": "16 April",
         "venue": "Lovely Professional University, Jalandhar, Punjab",
         "map": "http://pb.gdscwow.live/4dI"
     },
@@ -90,7 +90,8 @@
         "city": "Udaipur",
         "principalSubdivision": "Rajasthan",
         "date": "9 April",
-        "venue": "TBA"
+        "venue": "Swami Vivekananda Auditorium, Udaipur",
+        "map": "https://maps.app.goo.gl/MX6jgPXki6HFBxf26"
     },
     {
         "name": "Mumbai",
