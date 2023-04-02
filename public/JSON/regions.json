@@ -98,8 +98,10 @@
         "name": "Mumbai",
         "city": "Mumbai",
         "principalSubdivision": "Maharashtra",
-        "date": "8 April",
-        "venue": "TBA"
+        "date": "9 April",
+        "venue": "NMIMS Deemed-to-be-University",
+        "map": "https://maps.app.goo.gl/YKg4wFGjz4DZVBVg8",
+        "registration": "https://www.eventbrite.com/e/gdsc-wow-mumbai-2023-tickets-605944746047"
     },
     {
         "name": "Hyderabad",
