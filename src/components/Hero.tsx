@@ -116,7 +116,10 @@ const RegionFound = ({ currentRegion }: { currentRegion: Region | null | undefin
 						<div className='mt-2 h-[2px] transition-all bg-gred w-full'></div>
 					</div>
 					<div className='flex flex-col justify-center items-center gap-4'>
-						<Image src='/png/bits.jpg' className='rounded-full ' alt='bits' width={200} height={200} />
+						<div className='flex flex-wrap justify-evenly gap-8'>
+							<Image src='/png/bits.jpg' className='rounded-full ' alt='bits' width={200} height={200} />
+							<Image src='/png/bisr.jpg' className='rounded-full ' alt='bisr' width={200} height={200} />
+						</div>
 						<div className='text-lg p-4 text-center'>
 							Organized by Birla Institute of Technology, Mesra, Ranchi, Jaipur Campus in Association with Birla
 							Institute of Scientific Research, Jaipur
