@@ -48,7 +48,9 @@
         "name": "Chennai",
         "principalSubdivision": "Tamil Nadu",
         "date": "7 April",
-        "venue": "VIT Chennai - Venue"
+        "venue": "VIT Chennai - Venue",
+        "registration": "https://www.vitchennaievents.com/conf1/index.php?eventid=1343",
+        "map": "https://maps.app.goo.gl/m7s6bwr38Z6sPoxf7"
     },
     {
         "name": "Kolkata",
