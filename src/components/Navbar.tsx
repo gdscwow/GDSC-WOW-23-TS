@@ -29,19 +29,19 @@ export default function Navbar() {
               alt="circle"
             />
           </a>
-          <a
+          {/*<a
             href="#hackathon"
             className="flex items-center px-6 py-4 text-sm rounded-md cursor-pointer lg:text-md bg-gblue"
           >
             <span className={`${poppins.className} text-white uppercase`}>
               Register for hackathon
             </span>
-          </a>
+          </a>*/}
         </div>
       </div>
       <div className="hidden lg:block">
-        <div className="flex items-center w-full py-6 bg-white select-none justify-evenly backdrop:blur-lg">
-          <div className="flex items-center justify-center gap-2 text-2xl lg:text-3xl">
+        <div className="flex items-center w-full py-6 bg-white select-none justify-between backdrop:blur-lg">
+          <div className="flex items-center ml-40 justify-center gap-2 text-2xl lg:text-3xl">
             <Image
               src="/svg/circle.svg"
               width={70}
@@ -53,7 +53,7 @@ export default function Navbar() {
               WOW
             </span>
           </div>
-          <div className="flex items-center justify-evenly">
+          <div className="flex items-center mr-40 justify-evenly">
             {[
               { name: "Home", to: "#hero" },
               { name: "About us", to: "#region-banner" },
@@ -73,14 +73,14 @@ export default function Navbar() {
               );
             })}
           </div>
-          <a
+          {/*<a
             href="#hackathon"
             className="flex items-center px-6 py-4 text-sm rounded-md cursor-pointer lg:text-md bg-gblue"
           >
             <span className={`${poppins.className} text-white uppercase`}>
               Register for hackathon
             </span>
-          </a>
+          </a>*/}
         </div>
       </div>
     </nav>
