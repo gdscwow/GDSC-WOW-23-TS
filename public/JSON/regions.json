@@ -33,8 +33,9 @@
     {
         "name": "Lucknow",
         "principalSubdivision": "Uttar Pradesh",
-        "date": "10 April",
-        "venue": "TBA"
+        "date": "11 April",
+        "registration": "https://forms.gle/9yemcy9mjTzKTBYB7",
+        "venue": "Dr. Akhilesh Das Gupta Auditorium, BBD ITM, Faizabad Road, Lucknow"
     },
     {
         "name": "Pune",
@@ -94,7 +95,8 @@
         "principalSubdivision": "Rajasthan",
         "date": "9 April",
         "venue": "Swami Vivekananda Auditorium, Udaipur",
-        "map": "https://maps.app.goo.gl/MX6jgPXki6HFBxf26"
+        "map": "https://maps.app.goo.gl/MX6jgPXki6HFBxf26",
+        "registration": "https://lu.ma/gdscwowudaipur"
     },
     {
         "name": "Mumbai",
